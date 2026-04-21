@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "PaperTrail",
+    "slug": "papertrail",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.papertrail.app"
+    },
+    "extra": {
+      "apiBaseUrl": "http://192.168.43.77:8080/api"
+    }
+  }
+}

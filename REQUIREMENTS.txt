@@ -1,0 +1,118 @@
+## Backend Requirements
+
+### System Requirements
+- Java Development Kit (JDK) 21+
+- Maven 3.9.9+
+- MySQL 8.0+
+
+### Java Dependencies
+All managed by Maven (see backend/pom.xml):
+- Spring Boot 3.3.4
+- Spring Security
+- Spring Data JPA
+- Hibernate 6.5.3
+- MySQL Connector Java 8.3.0
+- JWT (io.jsonwebtoken)
+- Twilio SDK
+- Javax Mail
+- Lombok
+
+### Installation
+1. Install Java 21: https://www.oracle.com/java/technologies/downloads/
+2. Install Maven 3.9.9: https://maven.apache.org/download.cgi
+3. Install MySQL 8.0: https://dev.mysql.com/downloads/mysql/
+
+### Build & Run
+```bash
+cd backend
+mvn clean compile
+mvn spring-boot:run
+```
+
+---
+
+## Frontend Requirements
+
+### System Requirements
+- Node.js 18+
+- npm 9+ or yarn 3+
+
+### Node Dependencies
+All managed by npm (see frontend/package.json):
+- expo ~54.0.0
+- react 19.1.0
+- react-native 0.81.5
+- @react-navigation/* (routing)
+- axios (API calls)
+- @react-native-async-storage/async-storage (local storage)
+- expo-status-bar
+
+### Installation
+1. Install Node.js: https://nodejs.org/
+2. Install dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+### Run
+```bash
+npx expo start --clear
+```
+
+---
+
+## Database Requirements
+
+### MySQL
+- Version: 8.0+
+- Database: papertrail_db
+- User: root (or configure in .env)
+
+### Tables
+Auto-created by Hibernate JPA on startup. Include:
+- users
+- documents
+- otp_records
+- alerts
+
+---
+
+## Optional Requirements
+
+### Docker
+- Docker Desktop (for docker-compose)
+
+### Twilio
+- Active Twilio account for SMS notifications
+- Add credentials to backend/.env
+
+### Email Service
+- Nodemailer configured for email notifications
+
+---
+
+## Environment Files
+
+Copy and configure:
+```bash
+# Backend
+cp backend/.env.example backend/.env
+
+# Frontend
+cp frontend/.env.example frontend/.env
+```
+
+---
+
+## Quick Start Command
+
+```bash
+# Terminal 1: Start Backend
+cd backend
+mvn spring-boot:run
+
+# Terminal 2: Start Frontend
+cd frontend
+npx expo start --clear
+```
